@@ -51,7 +51,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAboutDal.cs" />
+    <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\IContactDal.cs" />
+    <Compile Include="Abstract\IContentDal.cs" />
+    <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
+    <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
+    <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="EntityFramework\EfAboutDal.cs" />
+    <Compile Include="EntityFramework\EfCategoryDal.cs" />
+    <Compile Include="EntityFramework\EfContactDal.cs" />
+    <Compile Include="EntityFramework\EfContentDal.cs" />
+    <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfWriterDal.cs" />
+    <Compile Include="Migrations\202504161855147_mig1.cs" />
+    <Compile Include="Migrations\202504161855147_mig1.Designer.cs">
+      <DependentUpon>202504161855147_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506082141192_mig_writer_edit.cs" />
+    <Compile Include="Migrations\202506082141192_mig_writer_edit.Designer.cs">
+      <DependentUpon>202506082141192_mig_writer_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506082240472_mig_writertitle_add.cs" />
+    <Compile Include="Migrations\202506082240472_mig_writertitle_add.Designer.cs">
+      <DependentUpon>202506082240472_mig_writertitle_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506091506044_mig_imagesizechange.cs" />
+    <Compile Include="Migrations\202506091506044_mig_imagesizechange.Designer.cs">
+      <DependentUpon>202506091506044_mig_imagesizechange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506091528332_mig_writer_addstatus.cs" />
+    <Compile Include="Migrations\202506091528332_mig_writer_addstatus.Designer.cs">
+      <DependentUpon>202506091528332_mig_writer_addstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506091736370_mig_contentstatusadd.cs" />
+    <Compile Include="Migrations\202506091736370_mig_contentstatusadd.Designer.cs">
+      <DependentUpon>202506091736370_mig_contentstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506091741211_mig_headingstatusadd.cs" />
+    <Compile Include="Migrations\202506091741211_mig_headingstatusadd.Designer.cs">
+      <DependentUpon>202506091741211_mig_headingstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +108,30 @@
       <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202504161855147_mig1.resx">
+      <DependentUpon>202504161855147_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506082141192_mig_writer_edit.resx">
+      <DependentUpon>202506082141192_mig_writer_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506082240472_mig_writertitle_add.resx">
+      <DependentUpon>202506082240472_mig_writertitle_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506091506044_mig_imagesizechange.resx">
+      <DependentUpon>202506091506044_mig_imagesizechange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506091528332_mig_writer_addstatus.resx">
+      <DependentUpon>202506091528332_mig_writer_addstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506091736370_mig_contentstatusadd.resx">
+      <DependentUpon>202506091736370_mig_contentstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506091741211_mig_headingstatusadd.resx">
+      <DependentUpon>202506091741211_mig_headingstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
