@@ -12,6 +12,8 @@ namespace MvcProjeKampi.Controllers
         // GET: Category
 
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
+
+        [Authorize] // Bu attribute, bu controller'a erişim için kullanıcıların oturum açmış olması gerektiğini belirtir.
         public ActionResult Index()
         {
             return View();

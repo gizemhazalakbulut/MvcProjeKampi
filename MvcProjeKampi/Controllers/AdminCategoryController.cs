@@ -14,6 +14,8 @@ namespace MvcProjeKampi.Controllers
     public class AdminCategoryController : Controller
     {
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
+
+        [Authorize(Roles="B")] // Bu attribute, bu controller'a erişim için kullanıcıların oturum açmış olması gerektiğini belirtir.
         public ActionResult Index()
         {
             var categoryvalues = cm.GetList();

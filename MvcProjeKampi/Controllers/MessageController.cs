@@ -21,6 +21,8 @@ namespace MvcProjeKampi.Controllers
         MessageManager cm = new MessageManager(new EfMessageDal());
         MessageValidator messageValidator = new MessageValidator();
         // GET: Message
+
+        [Authorize] // Bu attribute, bu controller'a erişim için kullanıcıların oturum açmış olması gerektiğini belirtir.
         public ActionResult Inbox()
         {
             var messagelist = cm.GetListInbox(); 
